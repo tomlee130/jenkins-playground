@@ -1,3 +1,5 @@
 node {
-    sh "cd ${WORKSPACE}/ios && xcodebuild"
+
+    sh "cd ${WORKSPACE} && ls -al"
+    sh "cd ios && xcodebuild"
 }
