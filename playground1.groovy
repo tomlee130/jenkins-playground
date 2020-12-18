@@ -10,7 +10,7 @@ pipeline {
 				script {
 					MUTABLE_VAR = sh(script: 'echo abc', returnStdout: true)
 				}
-				sh "Something value is ${MUTABLE_VAR}"
+				sh "echo \"Something value is ${MUTABLE_VAR}\""
 			}
 		}
 	}
