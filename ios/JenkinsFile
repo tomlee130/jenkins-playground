@@ -1,5 +1,5 @@
 node {
 
     sh "cd ${WORKSPACE} && ls -al"
-    sh "cd ios && xcodebuild"
+    sh "cd ios && xcodebuild test -scheme TheSample  -destination 'platform=iOS Simulator,name=iPhone 11' "
 }
