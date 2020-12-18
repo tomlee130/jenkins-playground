@@ -35,7 +35,7 @@ pipeline {
     post {
         unstable {
             emailext (
-                body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n构建日志：${BUILD_URL}console""",
+                body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n""",
                 subject: '【Jenkins构建通知】:$JOB_NAME - Build # $BUILD_NUMBER - Unstable!',
                 to: 'admin@test.cn',
                 from: 'test@test.cn'
@@ -43,7 +43,7 @@ pipeline {
         }   
         success {
             emailext (
-                body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n构建日志：${BUILD_URL}console""",
+                body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n""",
                 subject: '【Jenkins构建通知】:$JOB_NAME - Build # $BUILD_NUMBER - Successful!',
                 to: 'admin@test.cn',
                 from: 'test@test.cn'
@@ -51,7 +51,7 @@ pipeline {
         }   
         failure {
             emailext (
-                body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n构建日志：${BUILD_URL}console""",
+                body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n""",
                 subject: '【Jenkins构建通知】:$JOB_NAME - Build # $BUILD_NUMBER - Failure!',
                 to: 'admin@test.cn',
                 from: 'test@test.cn'
