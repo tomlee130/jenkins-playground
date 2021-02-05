@@ -37,24 +37,24 @@ pipeline {
             emailext (
                 body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n""",
                 subject: '【Jenkins构建通知】:$JOB_NAME - Build # $BUILD_NUMBER - Unstable!',
-                to: 'admin@test.cn',
-                from: 'test@test.cn'
+                to: 'tomlee1302@qq.com',
+                from: 'tomlee1302@qq.com'
             )   
         }   
         success {
             emailext (
                 body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n""",
                 subject: '【Jenkins构建通知】:$JOB_NAME - Build # $BUILD_NUMBER - Successful!',
-                to: 'admin@test.cn',
-                from: 'test@test.cn'
+                to: 'tomlee1302@qq.com',
+                from: 'tomlee1302@qq.com'
             )   
         }   
         failure {
             emailext (
                 body: """项目名称：${JOB_NAME}\n构建编号：${BUILD_NUMBER}\n""",
                 subject: '【Jenkins构建通知】:$JOB_NAME - Build # $BUILD_NUMBER - Failure!',
-                to: 'admin@test.cn',
-                from: 'test@test.cn'
+                to: 'tomlee1302@qq.com',
+                from: 'tomlee1302@qq.com'
             )   
         }   
     } 
